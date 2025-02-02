@@ -1,1 +1,32 @@
+# Simple Calculation 2.0
+def main():
+    scores = []  # List to store quiz scores
 
+    while True:
+        score = input("Enter a quiz score (or type 'quit' to quit):\n")
+
+        if score.lower() == 'exit':
+          break
+
+        
+        if score.isdigit():
+            scores.append(float(score))  
+        else:
+            print("Invalid input! Please enter a valid quiz score!")
+
+        
+        another = input("Do you want to enter another quiz score? (y/n): ").strip().lower()
+        if another != 'yes' or another != 'y':
+          break
+
+    
+    if scores:
+        average_score = sum(scores) / len(scores)
+        print(f"The average quiz score is: {average_score:.2f}")
+    else:
+        print("No scores were entered.")
+
+if __name__ == "__main__":
+    main()
+
+    
