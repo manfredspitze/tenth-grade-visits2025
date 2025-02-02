@@ -1,4 +1,4 @@
-# Calculate an average
+# Simple Calculation
 
 # Input
 quiz1 = 88
