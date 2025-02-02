@@ -3,10 +3,10 @@ def main():
     scores = []  # List to store quiz scores
 
     while True:
-        score = input("Enter a quiz score (or type 'quit' to quit):\n")
+        score = input("Enter a quiz score (or type 'q' to quit):\n")
 
-        if score.lower() == 'exit':
-          break
+        if score.lower() == 'q':
+            break
 
         
         if score.isdigit():
@@ -16,8 +16,8 @@ def main():
 
         
         another = input("Do you want to enter another quiz score? (y/n): ").strip().lower()
-        if another != 'yes' or another != 'y':
-          break
+        if another not in ['y', 'yes']:
+            break
 
     
     if scores:
